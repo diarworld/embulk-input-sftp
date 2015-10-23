@@ -1,10 +1,10 @@
-# Sftp file output plugin for Embulk
+# Sftp file input plugin for Embulk
 
-Stores files on a SFTP Server
+Gets files from SFTP Server
 
 ## Overview
 
-* **Plugin type**: file output
+* **Plugin type**: file input
 * **Load all or nothing**: no
 * **Resume supported**: no
 * **Cleanup supported**: no
@@ -26,12 +26,12 @@ Stores files on a SFTP Server
 ## Example
 
 ```yaml
-out:
+in:
   type: sftp
   host: 127.0.0.1
   port: 22
-  user: civitaspo
-  secret_key_file: /Users/civitaspo/.ssh/id_rsa
+  user: test
+  secret_key_file: ~/.ssh/id_rsa
   secret_key_passphrase: secret_pass
   user_directory_is_root: false
   timeout: 600
